@@ -177,7 +177,7 @@ Hadoop安装（centos7下配置Hadoop3.2.2）
             </property>
     </configuration>
 
-5.yarn-site.xml
+5.yarn-site.xml（一定要看准自己主节点的名字value的值很关键）
     <configuration>
             <!-- Site specific YARN configuration properties -->
             <!-- 必须配置 指定YARN的老大（ResourceManager）在哪一台主机 -->
@@ -200,7 +200,7 @@ Hadoop安装（centos7下配置Hadoop3.2.2）
     node3
 
 十、发送配置文件
-    vi /software/hadoop-3.2.2/etc
+    cd /software/hadoop-3.2.2/etc
     scp -r hadoop root@node1:/software/hadoop-3.2.2/etc/
     scp -r hadoop root@node2:/software/hadoop-3.2.2/etc/
     scp -r hadoop root@node3:/software/hadoop-3.2.2/etc/
